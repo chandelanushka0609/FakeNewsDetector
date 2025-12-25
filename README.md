@@ -159,7 +159,8 @@ Cloud-based API deployment
 
 👤 Developer
 
-Your Name
+Anushka Chandel 
+
 
 Fake News Detection System — 2025
 Built using Machine Learning and Streamlit.# FakeNewsDetector
