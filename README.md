@@ -43,7 +43,7 @@ Users can analyze news by pasting text, entering a URL, or uploading a CSV file.
 3. Deploy as a cloud-based API
 
 ## 8. Author
-Your Name  
+Anushka Chandel
 Fake News Detection Project – 2025
 
 
