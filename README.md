@@ -44,6 +44,7 @@ Users can analyze news by pasting text, entering a URL, or uploading a CSV file.
 
 ## 8. Author
 Anushka Chandel
+
 Fake News Detection Project – 2025
 
 
