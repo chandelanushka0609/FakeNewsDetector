@@ -1,169 +1,49 @@
-# Fake News Detection System (Machine Learning + Streamlit)
-An interactive Fake News Classification System built using Logistic Regression, TF-IDF Vectorization, and a modern Streamlit Web App (Aurora Neon UI). The system can analyze:
+# Fake News Detection System
+
+A simple Fake News Detection web application built using Machine Learning and Streamlit.
+The system predicts whether a news article is Fake or Real and displays a credibility score.
+
+## 1. Project Overview
+This project uses a Logistic Regression model trained on labeled news data.
+Users can analyze news by pasting text, entering a URL, or uploading a CSV file.
+
+## 2. Features
+1. Detects fake or real news from pasted text
+2. Supports real-time news checking using article URLs
+3. Allows bulk prediction using CSV file upload
+4. Displays prediction confidence as a credibility score
+5. Simple and interactive Streamlit web interface
+
+## 3. Tech Stack
+1. Python
+2. Logistic Regression
+3. TF-IDF Vectorizer
+4. Streamlit
+
+## 4. Project Structure
+1. app.py – Streamlit web application
+2. f2.py – Model training script
+3. model.pkl – Trained ML model
+4. vectorizer.pkl – Saved TF-IDF vectorizer
+5. dataset.csv – Training dataset
+6. requirements.txt – Required libraries
+
+## 5. How to Run the Project
+1. Clone the repository
+2. Install dependencies using: pip install -r requirements.txt
+3. Run the app using: streamlit run app.py
+
+## 6. Output
+1. Fake News or Real News prediction
+2. Confidence score shown as percentage
+
+## 7. Future Improvements
+1. Use advanced models like BERT
+2. Add multi-language support
+3. Deploy as a cloud-based API
+
+## 8. Author
+Your Name  
+Fake News Detection Project – 2025
 
-Manually pasted news text
 
-Real-time online news articles (via URL extraction)
-
-Bulk CSV files with multiple news entries
-
-It produces a credibility score, a fake/real prediction, and includes a beautiful animated gauge visualization.
-
-Features
-Real-time Fake News Detection:
-
-Paste text or enter a URL — the system extracts and analyzes the article.
-
-Machine Learning Model (Logistic Regression):
-
-Trained on labeled fake/real news datasets using TF-IDF (5000 features).
-
-Animated UI Components:
-
-Aurora Neon Theme
-
-Animated credibility gauge
-
-Gradient badges
-
-Smooth transitions
-
-Batch Processing:
-
-Upload a CSV containing a text column to classify hundreds of articles at once.
-
-URL Content Extraction:
-
-Supports:
-
-newspaper3k
-
-readability-lxml
-
-Fallback: BeautifulSoup scraper
-
-Tech Stack
-(Component -> Technology)
-
-Model -> Logistic Regression
-
-Feature Extraction -> TfidfVectorizer (5000 features)
-
-Frontend -> Streamlit
-
-Dataset -> Custom combined news dataset
-
-Language -> Python
-
-Project Structure
-Fake-News-Detector/
-
-── app.py # Main Streamlit application
-
-── f2.py # Model training script
-
-── model.pkl # Trained ML model
-
-── vectorizer.pkl # Saved TF-IDF vectorizer
-
-── dataset.csv # Training dataset
-
-── requirements.txt # Required libraries
-
-── README.md # Documentation
-
-Installation & Setup
-1️. Clone the repository:
-
-git clone <your-repo-link>
-
-cd Fake-News-Detector
-2️. Install all dependencies:
-
-pip install -r requirements.txt
-3️. Run the web app:
-
-streamlit run app.py
-The application will open in your browser automatically.
-
-How It Works
-Preprocessing:
-
-Lowercase conversion
-
-Removing punctuation
-
-Stopword removal
-
-Lemmatization
-
-TF-IDF vectorization
-
-Model Prediction:
-
-For each input, the model outputs:
-
-Fake News (0)
-
-Real News (1)
-
-Probability score → displayed via animated gauge
-
-UI Output:
-
-Prediction category
-
-Credibility score (%)
-
-Animation badge
-
-Batch Analysis (CSV Upload)
-Prepare a CSV file with at least:
-
-text
-
-"Some news article..."
-
-"Another news article..."
-
-Then upload in the web app → results appear instantly + downloadable CSV.
-
-Real-Time URL Checker
-Paste any article URL →
-
-System extracts content → runs the same ML pipeline → returns prediction + score.
-
-For Teachers / Evaluators
-Install dependencies
-
-pip install -r requirements.txt
-
-Run the application
-
-streamlit run app.py
-
-Test using:
-
-Manually typed news
-
-URL extraction
-
-Bulk CSV upload
-
-No external configuration is required.
-
-Future Improvements
-Transformer-based models (BERT, DistilBERT)
-
-Multi-language news detection
-
-Browser plugin extension
-
-API deployment on cloud
-
-Developer
-Ayush
-
-(Fake News Detection Project — 2025)
-
-(Built with love and AI assistance.)
