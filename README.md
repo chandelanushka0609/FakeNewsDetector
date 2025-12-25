@@ -1,166 +1,169 @@
-📰 Fake News Detection System
-Machine Learning + Streamlit Web Application
+# Fake News Detection System (Machine Learning + Streamlit)
+An interactive Fake News Classification System built using Logistic Regression, TF-IDF Vectorization, and a modern Streamlit Web App (Aurora Neon UI). The system can analyze:
 
-An interactive Fake News Detection System built using Machine Learning and a modern Streamlit-based web interface.
-The application analyzes news content and predicts whether it is Real or Fake, along with a credibility score displayed through an animated visualization.
+Manually pasted news text
 
-The system supports:
+Real-time online news articles (via URL extraction)
 
-Manual news text input
+Bulk CSV files with multiple news entries
 
-Live news article analysis via URL
+It produces a credibility score, a fake/real prediction, and includes a beautiful animated gauge visualization.
 
-Bulk classification using CSV files
+Features
+Real-time Fake News Detection:
 
-✨ Key Features
-🔍 Real-Time Fake News Detection
+Paste text or enter a URL — the system extracts and analyzes the article.
 
-Paste any news text or
+Machine Learning Model (Logistic Regression):
 
-Enter a news article URL to automatically extract and analyze content
+Trained on labeled fake/real news datasets using TF-IDF (5000 features).
 
-🤖 Machine Learning Model
+Animated UI Components:
 
-Logistic Regression classifier
-
-TF-IDF vectorization with 5000 features
-
-Trained on a labeled fake/real news dataset
-
-🎨 Interactive & Animated UI
-
-Aurora Neon themed interface
+Aurora Neon Theme
 
 Animated credibility gauge
 
-Gradient prediction badges
+Gradient badges
 
-Smooth transitions for better user experience
+Smooth transitions
 
-📂 Batch Processing (CSV Upload)
+Batch Processing:
 
-Upload CSV files with multiple news articles
+Upload a CSV containing a text column to classify hundreds of articles at once.
 
-Classify hundreds of entries in one click
+URL Content Extraction:
 
-Download results instantly
-
-🌐 URL-Based News Analysis
-
-Automatically extracts article text using:
+Supports:
 
 newspaper3k
 
 readability-lxml
 
-Fallback scraper using BeautifulSoup
+Fallback: BeautifulSoup scraper
 
-🛠️ Tech Stack
-Component	Technology
-Model	Logistic Regression
-Feature Extraction	TF-IDF Vectorizer
-Frontend	Streamlit
-Programming Language	Python
-Dataset	Custom combined fake & real news data
-📁 Project Structure
+Tech Stack
+(Component -> Technology)
+
+Model -> Logistic Regression
+
+Feature Extraction -> TfidfVectorizer (5000 features)
+
+Frontend -> Streamlit
+
+Dataset -> Custom combined news dataset
+
+Language -> Python
+
+Project Structure
 Fake-News-Detector/
-│
-├── app.py              # Main Streamlit application
-├── f2.py               # Model training script
-├── model.pkl           # Trained ML model
-├── vectorizer.pkl      # Saved TF-IDF vectorizer
-├── dataset.csv         # Training dataset
-├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
 
-🚀 Installation & Setup
-1️⃣ Clone the repository
-git clone <your-repository-link>
+── app.py # Main Streamlit application
+
+── f2.py # Model training script
+
+── model.pkl # Trained ML model
+
+── vectorizer.pkl # Saved TF-IDF vectorizer
+
+── dataset.csv # Training dataset
+
+── requirements.txt # Required libraries
+
+── README.md # Documentation
+
+Installation & Setup
+1️. Clone the repository:
+
+git clone <your-repo-link>
+
 cd Fake-News-Detector
+2️. Install all dependencies:
 
-2️⃣ Install dependencies
 pip install -r requirements.txt
+3️. Run the web app:
 
-3️⃣ Run the application
 streamlit run app.py
+The application will open in your browser automatically.
 
+How It Works
+Preprocessing:
 
-The web app will open automatically in your browser.
+Lowercase conversion
 
-⚙️ How the System Works
-🧹 Text Preprocessing
+Removing punctuation
 
-Converts text to lowercase
+Stopword removal
 
-Removes punctuation
+Lemmatization
 
-Eliminates stopwords
+TF-IDF vectorization
 
-Applies lemmatization
+Model Prediction:
 
-Converts text into numerical form using TF-IDF
+For each input, the model outputs:
 
-📊 Prediction Output
+Fake News (0)
 
-For each input, the model provides:
+Real News (1)
 
-Fake News (0) or Real News (1)
+Probability score → displayed via animated gauge
 
-Confidence probability
+UI Output:
 
-Visual credibility gauge (%)
+Prediction category
 
-📑 Batch Analysis (CSV Upload)
+Credibility score (%)
 
-Prepare a CSV file with a text column:
+Animation badge
+
+Batch Analysis (CSV Upload)
+Prepare a CSV file with at least:
 
 text
-"Sample news article text..."
-"Another news article text..."
 
+"Some news article..."
 
-Upload the file in the app → get predictions instantly → download the result CSV.
+"Another news article..."
 
-🌍 Real-Time URL Checker
+Then upload in the web app → results appear instantly + downloadable CSV.
 
-Paste any valid news article URL
+Real-Time URL Checker
+Paste any article URL →
 
-System extracts the article content
+System extracts content → runs the same ML pipeline → returns prediction + score.
 
-Runs the ML pipeline
+For Teachers / Evaluators
+Install dependencies
 
-Displays prediction + credibility score
+pip install -r requirements.txt
 
-👩‍🏫 For Evaluation / Demo Use
+Run the application
 
-Install required libraries
-
-Run the Streamlit app
+streamlit run app.py
 
 Test using:
 
-Manual text input
+Manually typed news
 
-URL-based analysis
+URL extraction
 
-CSV bulk upload
+Bulk CSV upload
 
-No additional configuration is required.
+No external configuration is required.
 
-🔮 Future Enhancements
-
+Future Improvements
 Transformer-based models (BERT, DistilBERT)
 
 Multi-language news detection
 
-Browser extension integration
+Browser plugin extension
 
-Cloud-based API deployment
+API deployment on cloud
 
-👤 Developer
+Developer
+Ayush
 
-Anushka Chandel 
+(Fake News Detection Project — 2025)
 
-
-Fake News Detection System — 2025
-Built using Machine Learning and Streamlit.# FakeNewsDetector
+(Built with love and AI assistance.)
